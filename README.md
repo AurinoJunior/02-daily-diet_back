@@ -14,10 +14,10 @@
 
 📍 **Conteúdo**
 
-- [Contexto](#:blue_book:-contexto)
-- [Tecnologias](#:computer:-tecnologias)
-- [Iniciando o projeto](#:video_game:-iniciando-o-projeto)
-- [Licença](#:page_with_curl:-licença)
+- [Contexto](#blue_book-contexto)
+- [Tecnologias](#computer-tecnologias)
+- [Iniciando o projeto](#video_game-iniciando-o-projeto)
+- [Licença](#page_with_curl-licença)
 
 ## :blue_book: Contexto
 
