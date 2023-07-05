@@ -14,16 +14,16 @@
 
 📍 **Conteúdo**
 
-- [Contexto](#📘-contexto)
-- [Tecnologias](#💻-tecnologias)
-- [Iniciando o projeto](#🎮-iniciando-o-projeto)
-- [Licença](#🗒️-licença)
+- [Contexto](#:blue_book:-contexto)
+- [Tecnologias](#:computer:-tecnologias)
+- [Iniciando o projeto](#:video_game:-iniciando-o-projeto)
+- [Licença](#:page_with_curl:-licença)
 
-## 📘 Contexto
+## :blue_book: Contexto
 
 Nesse desafio desenvolvi uma API para controle de dieta diária, a Daily Diet API, desafio proposto para finalização do segundo modulo do bootcamp ignite nodejs 2023.
 
-## 💻 Tecnologias
+## :computer: Tecnologias
 
 - Node
 - Typescript
@@ -35,7 +35,7 @@ Nesse desafio desenvolvi uma API para controle de dieta diária, a Daily Diet AP
 - supertest
 - eslint
 
-## 🎮 Iniciando o projeto
+## :video_game: Iniciando o projeto
 
 1. Clonar o repositório com git
 2. Instalar todas as dependencias com `yarn`
@@ -68,6 +68,6 @@ Nesse desafio desenvolvi uma API para controle de dieta diária, a Daily Diet AP
   4. Está dentro ou não da dieta
 - [ ] O usuário só pode visualizar, editar e apagar as refeições o qual ele criou.
 
-## 🗒️ Licença
+## :page_with_curl: Licença
 
 MIT
