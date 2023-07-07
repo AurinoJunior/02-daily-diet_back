@@ -7,8 +7,8 @@ export async function checkIfUserIdExists(
   const userId = request.cookies.userId
 
   if (!userId) {
-    return reply.status(401).send({
-      error: 'Unauthorized',
+    return reply.status(403).send({
+      error: 'Forbidden',
     })
   }
 }

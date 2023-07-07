@@ -3,9 +3,11 @@ import { FastifyInstance } from 'fastify'
 import { z } from 'zod'
 import { knex } from '../database'
 import { checkIfUserIdExists } from '../middlewares/checkIfUserIdExists'
+import { checkIfUserIsAuthorized } from '../middlewares/checkIfUserIsAuthorized'
 
 export async function mealRoute(app: FastifyInstance) {
   app.addHook('preHandler', checkIfUserIdExists)
+  app.addHook('preHandler', checkIfUserIsAuthorized)
 
   app.post('/', async (request, reply) => {
     const createMealBodySchema = z.object({
