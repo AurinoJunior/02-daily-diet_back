@@ -3,6 +3,7 @@ import { FastifyInstance } from 'fastify'
 import { z } from 'zod'
 import { knex } from '../database'
 import { checkIfUserIdExists } from '../middlewares/checkIfUserIdExists'
+import { calcBestSquenceDiet } from '../utils/calcBestSequenceDiet'
 
 export async function userRoute(app: FastifyInstance) {
   app.post('/', async (request, reply) => {
@@ -37,12 +38,45 @@ export async function userRoute(app: FastifyInstance) {
     async (request, reply) => {
       const { userId } = request.cookies
 
-      const userResult = await knex
+      const meals = await knex.table('meal').where('userId', userId).select('*')
+      const user = await knex
         .table('user')
-        .innerJoin('meal', 'user.id', '=', 'meal.userId')
+        .where('id', userId)
+        .select('*')
+        .first()
 
       return reply.status(200).send({
-        userResult,
+        user,
+        meals,
+      })
+    },
+  )
+
+  app.get(
+    '/metrics',
+    {
+      preHandler: [checkIfUserIdExists],
+    },
+    async (request, reply) => {
+      const { userId } = request.cookies
+
+      const meals = await knex.table('meal').where('userId', userId).select('*')
+      const user = await knex
+        .table('user')
+        .where('id', userId)
+        .select('*')
+        .first()
+
+      const mealsInDiet = meals.filter(({ isInDiet }) => isInDiet)
+
+      return reply.status(200).send({
+        user,
+        metrics: {
+          totalMeals: meals.length,
+          inDiet: mealsInDiet.length,
+          offTheDiet: meals.length - mealsInDiet.length,
+          bestSequence: calcBestSquenceDiet(meals),
+        },
       })
     },
   )
