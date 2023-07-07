@@ -8,7 +8,7 @@ if (process.env.NODE_ENV === 'test') {
 }
 
 const envSchema = z.object({
-  NODE_ENV: z.enum(['development', 'test']).default('development'),
+  NODE_ENV: z.string().default('development'),
   DATABASE_URL: z.string(),
 })
 

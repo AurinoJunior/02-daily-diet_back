@@ -31,8 +31,6 @@ Nesse desafio desenvolvi uma API para controle de dieta diária, a Daily Diet AP
 - Knex
 - zod
 - sqlite3
-- vitest
-- supertest
 - eslint
 
 ## :video_game: Iniciando o projeto
@@ -42,8 +40,6 @@ Nesse desafio desenvolvi uma API para controle de dieta diária, a Daily Diet AP
 3. Criar um arquivo `.env` com base no `.env.example`
 4. Rodar as migrations com `yarn knex migrate:latest`
 5. E por fim rodar o projeto com `yarn dev`
-
-> para rodar os testes uso um arquivo de variaveis de ambiente diferente `.env.test`
 
 ## Requisitos funcionais
 
