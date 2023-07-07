@@ -47,8 +47,13 @@ Nesse desafio desenvolvi uma API para controle de dieta diária, a Daily Diet AP
 
 ## Requisitos funcionais
 
-- [ ] Deve ser possível criar um usuário;
-- [ ] Deve ser possível editar uma refeição, podendo alterar todos os dados acima;
+- [x] Deve ser possível criar um usuário;
+- [x] Deve ser possível registrar uma refeição feita, com as seguintes informações:
+  1. Nome
+  2. Descrição
+  3. Data e Hora
+  4. Está dentro ou não da dieta
+- [ ] Deve ser possível editar uma refeição.
 - [ ] Deve ser possível apagar uma refeição.
 - [ ] Deve ser possível listar todas as refeições de um usuário.
 - [ ] Deve ser possível visualizar uma única refeição.
@@ -61,11 +66,6 @@ Nesse desafio desenvolvi uma API para controle de dieta diária, a Daily Diet AP
 ## Requisitos de negocio
 
 - [ ] Deve ser possivel identificarmos o usuário entre as requisições;
-- [ ] Deve ser possível registrar uma refeição feita, com as seguintes informações:
-  1. Nome
-  2. Descrição
-  3. Data e Hora
-  4. Está dentro ou não da dieta
 - [ ] O usuário só pode visualizar, editar e apagar as refeições o qual ele criou.
 
 ## :page_with_curl: Licença
