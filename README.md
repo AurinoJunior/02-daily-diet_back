@@ -66,7 +66,7 @@ Nesse desafio desenvolvi uma API para controle de dieta diária, a Daily Diet AP
 ## Requisitos de negocio
 
 - [x] Deve ser possivel identificarmos o usuário entre as requisições;
-- [ ] O usuário só pode visualizar, editar e apagar as refeições o qual ele criou.
+- [x] O usuário só pode visualizar, editar e apagar as refeições o qual ele criou.
 
 ## :page_with_curl: Licença
 
